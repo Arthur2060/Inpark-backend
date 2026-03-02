@@ -19,8 +19,8 @@ vagas com rapidez e praticidade.
 
 O que começou como um Trabalho de Conclusão de Curso se transformou em algo maior hoje, o inpark é um projeto para aprimorar
 nossas habilidades como programadores, parte do nosso portfólio profissional, e um sistema em constante evolução; nosso objetivo com o
-sistema atualmente é melhorar funcionalidades já existentes, adicionar novas features, aplicar melhorias práticas baseadas em testes
-e aprendizados
+back-end do sistema atualmente é melhorar funcionalidades já existentes, adicionar novas features, aplicar melhorias práticas baseadas 
+em testes e aprendizados.
 
 ⚠️**IMPORTANTE Este repositório contém apenas parte do sistema. O front-end (interface do site) está disponível em um repositório
 separado.**
@@ -28,21 +28,20 @@ separado.**
 🌐 Repositório do Front-End
 
 🔗 Front-end do projeto:
-👉 https://github.com/DiegoGenuino/frontend-inpark
+👉 [FrontEnd-Inpark](https://github.com/DiegoGenuino/frontend-inpark)
 
 👨‍💻 Desenvolvedores:
 
-Diego Genuino
-https://github.com/DiegoGenuino
+[Diego Genuino](https://github.com/DiegoGenuino)
 
-Pedro Henrique Carvalho do Nascimento
-https://github.com/pedrohcnascimento
+[Pedro Henrique Carvalho do Nascimento](https://github.com/pedrohcnascimento
+)
 
-Guilherme Affonso
-https://github.com/Guilherme-C-A-Affonso
+[Guilherme Affonso](https://github.com/Guilherme-C-A-Affonso
+)
 
-Arthur
-https://github.com/Arthur2060
+[Arthur](https://github.com/Arthur2060
+)
 
 🔮 Próximos Passos
 
@@ -86,21 +85,20 @@ This repository contains only part of the system. The front-end (website interfa
 🌐 Front-End Repository
 
 🔗 Project front-end:
-👉 https://github.com/DiegoGenuino/frontend-inpark
+👉 [FrontEnd-Inpark](https://github.com/DiegoGenuino/frontend-inpark)
 
-👨‍💻 Developers:
+👨‍💻 Desenvolvedores:
 
-Diego Genuino
-https://github.com/DiegoGenuino
+[Diego Genuino](https://github.com/DiegoGenuino)
 
-Pedro Henrique Carvalho do Nascimento
-https://github.com/pedrohcnascimento
+[Pedro Henrique Carvalho do Nascimento](https://github.com/pedrohcnascimento
+)
 
-Guilherme Affonso
-https://github.com/Guilherme-C-A-Affonso
+[Guilherme Affonso](https://github.com/Guilherme-C-A-Affonso
+)
 
-Arthur
-https://github.com/Arthur2060
+[Arthur](https://github.com/Arthur2060
+)
 
 🔮 Next Steps
 
