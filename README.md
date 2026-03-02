@@ -49,7 +49,10 @@ https://github.com/Arthur2060
 Temos planos de disponibilizar o sistema completo em um servidor futuramente.
 Assim que isso acontecer, este README será atualizado com o link de acesso ao sistema em produção.
 
-English version:
+
+
+**ENGLISH VERSION:**
+
 📚 Course Completion Project
 Developed as a requirement to complete the Systems Development course at SENAI Anchieta, in December 2025.
 
