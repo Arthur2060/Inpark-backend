@@ -48,3 +48,57 @@ https://github.com/Arthur2060
 
 Temos planos de disponibilizar o sistema completo em um servidor futuramente.
 Assim que isso acontecer, este README será atualizado com o link de acesso ao sistema em produção.
+
+English version:
+📚 Course Completion Project
+Developed as a requirement to complete the Systems Development course at SENAI Anchieta, in December 2025.
+
+The Inpark system was developed with the following objectives:
+
+🏢 Efficiently manage parking lots
+
+📍 Display relevant information to nearby drivers
+
+🚘 Provide real-time parking space availability
+
+📊 Present data such as name, location, and other parking lot details
+
+In summary, the goal is to improve both parking lot management and the experience of drivers who are looking for parking spaces quickly and conveniently.
+
+🚀 Project Evolution
+
+What started as a Course Completion Project has grown into something bigger. Today, Inpark is a project aimed at improving our skills as developers, serving as part of our professional portfolio, and functioning as a system in constant evolution.
+
+Our current goals for the system include:
+
+Improving existing features
+
+Adding new functionalities
+
+Applying practical improvements based on testing and continuous learning
+
+⚠️ **IMPORTANT
+This repository contains only part of the system. The front-end (website interface) is available in a separate repository.**
+
+🌐 Front-End Repository
+
+🔗 Project front-end:
+👉 https://github.com/DiegoGenuino/frontend-inpark
+
+👨‍💻 Developers:
+
+Diego Genuino
+https://github.com/DiegoGenuino
+
+Pedro Henrique Carvalho do Nascimento
+https://github.com/pedrohcnascimento
+
+Guilherme Affonso
+https://github.com/Guilherme-C-A-Affonso
+
+Arthur
+https://github.com/Arthur2060
+
+🔮 Next Steps
+
+We plan to deploy the complete system to a server in the future. Once this happens, this README will be updated with the production access link.
