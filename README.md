@@ -1,7 +1,7 @@
 📚 Projeto de Conclusão de Curso
 Desenvolvido como requisito para conclusão do curso de Desenvolvimento de Sistemas no SENAI Anchieta, em dezembro de 2025.
 
-O back-end do Inpark é um sistema desenvolvido com os seguintes objetivos:
+O Inpark é um sistema desenvolvido com os seguintes objetivos:
 
 🏢 Gerenciar estacionamentos de forma eficiente
 
