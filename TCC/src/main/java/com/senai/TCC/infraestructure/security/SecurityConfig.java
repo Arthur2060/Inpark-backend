@@ -9,6 +9,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -24,6 +25,8 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(
                 AbstractHttpConfigurer::disable)
+                .sessionManagement(session ->
+                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/**","/auth/refresh","/swagger-ui/**","/v3/api-docs/**").permitAll()
 
@@ -32,9 +35,26 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/carro", "/carro/**").hasAnyRole(
                                 Role.CLIENTE.name(),
                                 Role.ADMIN.name())
-                        .requestMatchers(HttpMethod.GET, "/estacionamento", "/estacionamento/**", "/cliente/*", "/avaliacao", "/reserva/*").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/estacionamento", "/estacionamento/**", "/avaliacao").permitAll()
                         .requestMatchers(HttpMethod.GET, "/gerente", "/gerente/**", "/valor", "/valor/**").hasAnyRole(
                                 Role.DONO.name(),
+                                Role.ADMIN.name())
+
+                        .requestMatchers(HttpMethod.GET, "/dono").hasAnyRole(
+                                Role.DONO.name(),
+                                Role.ADMIN.name())
+
+                        .requestMatchers(HttpMethod.GET, "/cliente", "/cliente/*").permitAll()
+
+                        .requestMatchers(HttpMethod.GET, "/reserva", "/reserva/**").hasAnyRole(
+                                Role.DONO.name(),
+                                Role.GERENTE.name(),
+                                Role.CLIENTE.name(),
+                                Role.ADMIN.name())
+
+                        .requestMatchers(HttpMethod.GET, "/acesso", "/acesso/**").hasAnyRole(
+                                Role.DONO.name(),
+                                Role.GERENTE.name(),
                                 Role.ADMIN.name())
 
                         // Permições de requisições POST
@@ -48,14 +68,15 @@ public class SecurityConfig {
                                 Role.DONO.name(),
                                 Role.ADMIN.name())
 
-                        .requestMatchers(HttpMethod.POST, "/estacionamento/**", "/acesso").hasAnyRole(
+                        .requestMatchers(HttpMethod.POST, "/estacionamento/**", "/acesso/**").hasAnyRole(
+                                Role.CLIENTE.name(),
                                 Role.DONO.name(),
                                 Role.GERENTE.name(),
                                 Role.ADMIN.name())
 
                         // Permições de requisições PUT
 
-                        .requestMatchers(HttpMethod.PUT, "/carro/**", "/avaliacao/**").hasAnyRole(
+                        .requestMatchers(HttpMethod.PUT, "/carro/**", "/avaliacao/**", "/cliente/**").hasAnyRole(
                                 Role.CLIENTE.name(),
                                 Role.ADMIN.name())
 
@@ -63,7 +84,32 @@ public class SecurityConfig {
                                 Role.DONO.name(),
                                 Role.ADMIN.name())
 
-                        .requestMatchers(HttpMethod.PUT, "/estacionamento/**", "/reserva/**", "/acesso").hasAnyRole(
+                        .requestMatchers(HttpMethod.PUT, "/gerente/**", "/dono/**").hasAnyRole(
+                                Role.DONO.name(),
+                                Role.ADMIN.name())
+
+                        .requestMatchers(HttpMethod.PUT, "/estacionamento/**", "/reserva/**", "/acesso/**").hasAnyRole(
+                                Role.DONO.name(),
+                                Role.GERENTE.name(),
+                                Role.ADMIN.name())
+
+                        // Permições de requisições DELETE
+
+                        .requestMatchers(HttpMethod.DELETE, "/cliente/**").hasAnyRole(
+                                Role.DONO.name(),
+                                Role.GERENTE.name(),
+                                Role.ADMIN.name()
+                        )
+
+                        .requestMatchers(HttpMethod.DELETE, "/carro/**", "/avaliacao/**").hasAnyRole(
+                                Role.CLIENTE.name(),
+                                Role.ADMIN.name())
+
+                        .requestMatchers(HttpMethod.DELETE, "/estacionamento/**", "/valor/**", "/gerente/**", "/dono/**").hasAnyRole(
+                                Role.DONO.name(),
+                                Role.ADMIN.name())
+
+                        .requestMatchers(HttpMethod.DELETE, "/reserva/**", "/acesso/**").hasAnyRole(
                                 Role.DONO.name(),
                                 Role.GERENTE.name(),
                                 Role.ADMIN.name())

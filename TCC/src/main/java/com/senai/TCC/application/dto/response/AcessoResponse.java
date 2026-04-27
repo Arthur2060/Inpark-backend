@@ -1,9 +1,8 @@
 package com.senai.TCC.application.dto.response;
 
-import com.senai.TCC.model.entities.Acesso;
 import io.swagger.v3.oas.annotations.media.Schema;
 
-import java.sql.Time;
+import java.time.LocalTime;
 
 public record AcessoResponse(
         Long id,
@@ -27,7 +26,7 @@ public record AcessoResponse(
                 type = "string",
                 pattern = "HH:mm:ss"
         )
-        Time horaDeEntrada,
+        LocalTime horaDeEntrada,
         @Schema(
                 name = "horaDeSaida",
                 description = "Hora em que o carro saiu",
@@ -35,7 +34,7 @@ public record AcessoResponse(
                 type = "string",
                 pattern = "HH:mm:ss"
         )
-        Time horaDeSaida,
+        LocalTime horaDeSaida,
         @Schema(
                 name = "totalHoras",
                 description = "Total de horas que o carro ficou no estacionamento",
